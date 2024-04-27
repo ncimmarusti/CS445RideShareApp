@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentActivity">
+
+    <!-- Other UI components (e.g., map fragment) -->
+
+    <!-- EditText for card number -->
+    <EditText
+        android:id="@+id/editTextCardNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Card Number" />
+
+    <!-- EditText for expiration date -->
+    <EditText
+        android:id="@+id/editTextExpirationDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCardNumber"
+        android:hint="Expiration Date" />
+
+    <!-- EditText for card type -->
+    <EditText
+        android:id="@+id/editTextCardType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextExpirationDate"
+        android:hint="Card Type" />
+
+    <!-- EditText for security code -->
+    <EditText
+        android:id="@+id/editTextSecurityCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextCardType"
+        android:hint="Security Code" />
+
+    <!-- Button to add payment method -->
+    <Button
+        android:id="@+id/buttonAddPayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextSecurityCode"
+        android:text="Add Payment Method" />
+
+</RelativeLayout>

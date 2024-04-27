@@ -29,7 +29,7 @@ public class UserActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // Handle logout button click
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(DriverActivity.this, LoginActivity.class));
+                startActivity(new Intent(UserActivity.this, LoginActivity.class));
                 finish(); // Optional: Finish the current activity to prevent the user from going back
             }
         });

@@ -12,12 +12,10 @@ public class PhoneNumberFormatting {
         editText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // No action needed
             }
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // No action needed
             }
 
             @Override

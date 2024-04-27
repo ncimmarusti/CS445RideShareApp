@@ -135,9 +135,7 @@ public class RegisterActivity extends AppCompatActivity {
                                             } else {
                                                 // Handle Firestore write operation failure
                                                 if (task.getException() instanceof FirebaseFirestoreException && ((FirebaseFirestoreException) task.getException()).getCode() == FirebaseFirestoreException.Code.NOT_FOUND) {
-                                                    // "Users" collection doesn't exist, create it
                                                     FirebaseFirestore.getInstance().collection("Users").document().set(new HashMap<>());
-                                                    // Retry writing user data
                                                     registerUser();
                                                 } else {
                                                     // Display error message to the user
@@ -162,7 +160,7 @@ public class RegisterActivity extends AppCompatActivity {
             } else {
                 startActivity(new Intent(RegisterActivity.this, UserActivity.class));
             }
-            finish(); // Finish the current activity to prevent the user from going back
+            finish();
         } catch (Exception e) {
             e.printStackTrace();
             Toast.makeText(RegisterActivity.this, "Error redirecting to activity", Toast.LENGTH_SHORT).show();
@@ -180,7 +178,6 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public static boolean isValidPhoneNumber(String phoneNumber) {
-        // Define your expected pattern for the phone number with hyphens
         String pattern = "\\d{3}-\\d{3}-\\d{4}"; // Example: 123-456-7890
 
         // Check if the provided phone number matches the pattern

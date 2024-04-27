@@ -9,11 +9,9 @@ public class RideCostEstimator {
     // Method to calculate the estimated cost of the ride based on start and end locations
     public static double calculateEstimatedCost(LocationInfo startLocation, LocationInfo endLocation) {
         // Use the start and end locations to calculate the distance between them
-        // You can use the Haversine formula or Google Maps Distance Matrix API to calculate the distance
-
-        // For demonstration purposes, let's assume a simple formula to calculate the cost
+       
         double distance = calculateDistance(startLocation, endLocation);
-        double costPerKilometer = 1.5; // Assume $1.5 per kilometer
+        double costPerKilometer = 1.5;
         return distance * costPerKilometer;
     }
 
